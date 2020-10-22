@@ -21,7 +21,7 @@ form {
 .output {
   margin: 0 auto;
   padding-top: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   text-align: center;
   border: 3px solid black;
   background: rgba(237, 197, 189, 0.5);
