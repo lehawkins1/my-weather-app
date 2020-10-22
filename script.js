@@ -13,7 +13,7 @@ let days = [
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let h3 = document.querySelector("#currentDayTime");
-h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes< 9 ? minutes:0 + minutes}`;
+h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes} `;
 console.log(days[now.getDay()+1]);
 //Feature #2
 let apiKey = "1fe0cb2642f20c2da9d281f388283c50";
@@ -53,6 +53,7 @@ function showTemperature(response) {
 }
 
 function showForecast(response){
+<<<<<<< HEAD
   //On Thursday it prints Saturday
   console.log(response + " next day");
  /* let val = 1;
@@ -70,6 +71,13 @@ function showForecast(response){
     val++;
   }*/
   
+=======
+  console.log(response);
+  let day = days[now.getDay()] ;
+  let day1 = document.querySelector("#day1");
+  console.log(day1.innerHTML);
+  day1.innerHTML = days[now.getDay()+1];
+>>>>>>> parent of 626fbcf... Correctly printing out the weekdays now. Time to duplicate.
 }
 /*
 let currentLocationbutton = document.querySelector("#current-location");
