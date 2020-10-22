@@ -13,7 +13,7 @@ let days = [
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let h3 = document.querySelector("#currentDayTime");
-h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes} `;
+h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes< 9 ? minutes:0 + minutes}`;
 console.log(days[now.getDay()+1]);
 //Feature #2
 let apiKey = "1fe0cb2642f20c2da9d281f388283c50";
@@ -31,7 +31,6 @@ function search(event) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
-  console.log(apiUrl);
 }
 //display temperature in Celcius
 function showTemperature(response) {
@@ -53,31 +52,47 @@ function showTemperature(response) {
 }
 
 function showForecast(response){
-<<<<<<< HEAD
   //On Thursday it prints Saturday
   console.log(response + " next day");
- /* let val = 1;
+  let val =0;
   let day = days[now.getDay()] ;
-  console.log(day + " test");
-  while(val<8){
+  let query = document.querySelector("#day1");
+  query.innerHTML = day;
+
+  day = days[now.getDay()+1] ;
+  let query2 = document.querySelector("#day2");
+  query2.innerHTML = day;
+  
+  day = days[now.getDay()+2] ;
+  let query3 = document.querySelector("#day3");
+  query3.innerHTML = day;
+    day = days[now.getDay()+3] ;
+  let query4 = document.querySelector("#day4");
+  query4.innerHTML = day;
+    day = days[now.getDay()+4] ;
+  let query5 = document.querySelector("#day5");
+  query5.innerHTML = day;
+    day = days[now.getDay()+5] ;
+  let query6 = document.querySelector("#day6");
+  query6.innerHTML = day;
+    day = days[now.getDay()+6] ;
+  let query7 = document.querySelector("#day7");
+  query7.innerHTML = day;
+  
+
+  /*
+  while(val<3){
     //grabs first day field day1
-    let query = document.querySelector("#day"+val);
+    console.log(days[now.getDay()+val]);
+    day = days[now.getDay()+val];
     //prints out 
-    console.log(query.innerHTML);
-    console.log(days[now.getDay()+3]+" new days1");
-    days.innerHTML = days[now.getDay()+1];
-    console.log(val + "val");
-    console.log(days[now.getDay()+3]+ " in if");
+    query = document.querySelector("#day"+3);
+    console.log(document.querySelector("#day"+2)+ "qus");
+    //query.innerHTML = days[now.getDay()+1];
+    console.log(days[now.getDay()+val]+ " in if");
     val++;
   }*/
   
-=======
-  console.log(response);
-  let day = days[now.getDay()] ;
-  let day1 = document.querySelector("#day1");
-  console.log(day1.innerHTML);
-  day1.innerHTML = days[now.getDay()+1];
->>>>>>> parent of 626fbcf... Correctly printing out the weekdays now. Time to duplicate.
 }
 /*
 let currentLocationbutton = document.querySelector("#current-location");
