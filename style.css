@@ -8,7 +8,11 @@ h1 {
   text-align: center;
   font-family: "Merriweather", serif;
   font-weight: bolder;
-  font-size: 100px;
+  font-size: 70px;
+}
+form {
+  margin: 0 auto;
+  text-align: center;
 }
 h2 {
   display: inline;
@@ -20,9 +24,7 @@ h3 a {
   text-decoration: none;
   font-size: 20px;
 }
-form {
-  margin: 40px 0;
-}
+
 .fa-cloud-sun-rain {
   font-size: 200px;
   color: gold;
