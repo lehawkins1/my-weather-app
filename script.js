@@ -49,16 +49,27 @@ function showTemperature(response) {
   
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${apiKey}&units=metric`
   axios.get(apiUrl).then(showForecast);
+  console.log(apiUrl);
 }
 
 function showForecast(response){
   //On Thursday it prints Saturday
-  console.log(response.data.daily[2].temp);
-  let day = days[now.getDay()+1] ;
+  console.log(response + " next day");
+ /* let val = 1;
+  let day = days[now.getDay()] ;
+  console.log(day + " test");
+  while(val<8){
+    //grabs first day field day1
+    let query = document.querySelector("#day"+val);
+    //prints out 
+    console.log(query.innerHTML);
+    console.log(days[now.getDay()+3]+" new days1");
+    days.innerHTML = days[now.getDay()+1];
+    console.log(val + "val");
+    console.log(days[now.getDay()+3]+ " in if");
+    val++;
+  }*/
   
-  console.log(day);
-  let day1 = document.querySelector("#day1");
-  day1.innerHTML = day;
 }
 /*
 let currentLocationbutton = document.querySelector("#current-location");
