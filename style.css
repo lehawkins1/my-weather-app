@@ -11,14 +11,30 @@ h1 {
   font-size: 70px;
 }
 form {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   text-align: center;
+  
+}
+.output {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 75%;
+  text-align: center;
+  border: 3px solid black;
+  height: 500px;
 }
 h2 {
   display: inline;
+  font-size: 30px;
+}
+#currentDayTime {
+  font-size: 30px;
 }
 .degrees {
-  font-size: 40px;
+  font-size: 30px;
+}
+ul{
+  list-style-type: none;
 }
 h3 a {
   text-decoration: none;
@@ -26,24 +42,19 @@ h3 a {
 }
 
 .fa-cloud-sun-rain {
-  font-size: 200px;
+  font-size: 30px;
   color: gold;
+  display: inline;
 }
 .image {
   display: block;
 }
-#currentDayTime {
-  font-size: 25px;
-}
+
 #search {
   width: 400px;
 }
 
-.output {
-  margin: 40px 0;
-  padding: 20px;
-  border: 3px solid black;
-}
+
 .col {
   border: 1px solid black;
   margin: 0 10px;
