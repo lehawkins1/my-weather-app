@@ -13,7 +13,7 @@ let days = [
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let h3 = document.querySelector("#currentDayTime");
-h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes< 9 ? minutes:0 + minutes}`;
+h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes < 9 ? "0" + minutes:minutes}`;
 console.log(days[now.getDay()+1]);
 //Feature #2
 let apiKey = "1fe0cb2642f20c2da9d281f388283c50";
@@ -53,32 +53,61 @@ function showTemperature(response) {
 
 function showForecast(response){
   //On Thursday it prints Saturday
-  console.log(response + " next day");
+  
   let val =0;
   let day = days[now.getDay()] ;
   let query = document.querySelector("#day1");
   query.innerHTML = day;
-
+  console.log(response.data.daily[0].temp + " next day");
+  let high1 = document.querySelector("#high1")
+  let high1t = Math.round(response.data.daily[1].temp.max * 1.8 + 32)
+  high1.innerHTML = "High " + high1t + " °C";
   day = days[now.getDay()+1] ;
+
   let query2 = document.querySelector("#day2");
   query2.innerHTML = day;
-  
+    console.log(response.data.daily[0].temp + " next day");
+  let high2 = document.querySelector("#high2")
+  let high2t = Math.round(response.data.daily[1].temp.max * 1.8 + 32);
+  high2.innerHTML = "High " +  high2t + " °C";
+
   day = days[now.getDay()+2] ;
   let query3 = document.querySelector("#day3");
   query3.innerHTML = day;
+  console.log(response.data.daily[0].temp + " next day");
+  let high3 = document.querySelector("#high3")
+  let high3t = Math.round(response.data.daily[3].temp.max * 1.8 + 32)
+  high3.innerHTML = "High " + high3t + " °C";
+
     day = days[now.getDay()+3] ;
   let query4 = document.querySelector("#day4");
   query4.innerHTML = day;
+    console.log(response.data.daily[4].temp + " next day");
+  let high4 = document.querySelector("#high4")
+  let high4t = Math.round(response.data.daily[4].temp.max * 1.8 + 32)
+  high4.innerHTML = "High " + high4t + " °C";
+
     day = days[now.getDay()+4] ;
   let query5 = document.querySelector("#day5");
   query5.innerHTML = day;
+  let high5 = document.querySelector("#high5")
+  let high5t = Math.round(response.data.daily[5].temp.max * 1.8 + 32)
+  high5.innerHTML = "High " +  high5t + " °C";
+
     day = days[now.getDay()+5] ;
   let query6 = document.querySelector("#day6");
   query6.innerHTML = day;
+  let high6 = document.querySelector("#high6")
+  let high6t = Math.round(response.data.daily[6].temp.max * 1.8 + 32)
+  high6.innerHTML = "High " + high6t + " °C";
+
     day = days[now.getDay()+6] ;
   let query7 = document.querySelector("#day7");
   query7.innerHTML = day;
-  
+  console.log(response.data.daily[7].temp + " next day");
+  let high7 = document.querySelector("#high7")
+  let high7t = Math.round(response.data.daily[0].temp.max * 1.8 + 32)
+  high7.innerHTML ="High " +  high7t + " °C";
 
   /*
   while(val<3){
