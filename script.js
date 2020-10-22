@@ -14,6 +14,7 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let h3 = document.querySelector("#currentDayTime");
 h3.innerHTML = `${days[now.getDay()]} ${hours}:${minutes} `;
+console.log(days[now.getDay()+1]);
 //Feature #2
 let apiKey = "1fe0cb2642f20c2da9d281f388283c50";
 let form = document.querySelector("#form");
@@ -30,12 +31,28 @@ function search(event) {
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
+  console.log(apiUrl);
 }
 //display temperature in Celcius
 function showTemperature(response) {
+    let sug = document.querySelector("#see");
+  sug.innerHTML = response.data.weather[0].description;
   let ptemperature = response.data.main.temp;
   let temperature = Math.round(ptemperature * 1.8 + 32);
+  let hum = document.querySelector("#humidity");
+  hum.innerHTML = Math.round(response.data.main.humidity) + "%";
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed) + "mph";
   document.querySelector("#degree").innerHTML = `${temperature} °C`;
+  let lon = response.data.coord.lon;
+  let lat = response.data.coord.lat;
+  
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(showForecast);
+}
+
+function showForecast(response){
+  console.log(response);
 }
 /*
 let currentLocationbutton = document.querySelector("#current-location");
