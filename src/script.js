@@ -78,7 +78,7 @@ function showForecast(response){
   let high3 = document.querySelector("#high3")
   let high3t = Math.round(response.data.daily[3].temp.max * 1.8 + 32)
   high3.innerHTML = "High " + high3t + " °C";
-
+/* 
     day = days[now.getDay()+3] ;
   let query4 = document.querySelector("#day4");
   query4.innerHTML = day;
@@ -108,7 +108,7 @@ function showForecast(response){
   let high7 = document.querySelector("#high7")
   let high7t = Math.round(response.data.daily[0].temp.max * 1.8 + 32)
   high7.innerHTML ="High " +  high7t + " °C";
-
+*/
   /*
   while(val<3){
     //grabs first day field day1
