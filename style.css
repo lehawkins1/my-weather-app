@@ -1,4 +1,53 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
 h1 {
+  padding: 30px 0;
+  color: gold;
   text-align: center;
-  color: blue;
+  font-family: "Merriweather", serif;
+  font-weight: bolder;
+  font-size: 100px;
+}
+h2 {
+  display: inline;
+}
+.degrees {
+  font-size: 40px;
+}
+h3 a {
+  text-decoration: none;
+  font-size: 20px;
+}
+form {
+  margin: 40px 0;
+}
+.fa-cloud-sun-rain {
+  font-size: 200px;
+  color: gold;
+}
+.image {
+  display: block;
+}
+#currentDayTime {
+  font-size: 25px;
+}
+#search {
+  width: 400px;
+}
+
+.output {
+  margin: 40px 0;
+  padding: 20px;
+  border: 3px solid black;
+}
+.col {
+  border: 1px solid black;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+span {
+  padding-top: 200px;
 }
