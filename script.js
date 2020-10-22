@@ -53,6 +53,10 @@ function showTemperature(response) {
 
 function showForecast(response){
   console.log(response);
+  let day = days[now.getDay()] ;
+  let day1 = document.querySelector("#day1");
+  console.log(day1.innerHTML);
+  day1.innerHTML = days[now.getDay()+1];
 }
 /*
 let currentLocationbutton = document.querySelector("#current-location");
